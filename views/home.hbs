@@ -1,0 +1,77 @@
+<h1>Student Management System</h1>
+<h2><a href="/addusers" class="addbtn">Add User</a></h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>S.No</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>City</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+        <tr>
+            <td>{{this.ID}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.city}}</td>
+            <td><a class="edit" href="/edituser/{{this.ID}}">Edit</a></td>
+            <td><a onclick="return confirm('are you want to delete')" class="delete" href="/deleteuser/{{this.ID}}">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+    {{!-- <tbody>
+        <tr>
+            <td>1</td>
+            <td>R Mohan</td>
+            <td>27</td>
+            <td>Chennai</td>
+            <td><a href="" class="edit">Edit</a></td>
+            <td><a href="" class="delete">Delete</a></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>R Mohan</td>
+            <td>27</td>
+            <td>Chennai</td>
+            <td><a href="" class="edit">Edit</a></td>
+            <td><a href="" class="delete">Delete</a></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>R Mohan</td>
+            <td>27</td>
+            <td>Chennai</td>
+            <td><a href="" class="edit">Edit</a></td>
+            <td><a href="" class="delete">Delete</a></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>R Mohan</td>
+            <td>27</td>
+            <td>Chennai</td>
+            <td><a href="" class="edit">Edit</a></td>
+            <td><a href="" class="delete">Delete</a></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>R Mohan</td>
+            <td>27</td>
+            <td>Chennai</td>
+            <td><a href="" class="edit">Edit</a></td>
+            <td><a href="" class="delete">Delete</a></td>
+        </tr>
+    </tbody> --}}
+</table>
