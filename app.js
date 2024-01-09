@@ -2,6 +2,7 @@ const express = require("express");
 const exhbs = require("express-handlebars");
 const bdyprsr = require("body-parser");
 
+//dotenv config
 require("dotenv").config();
 
 const app = express();
